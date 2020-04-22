@@ -1,0 +1,22 @@
+## use Selenium to crawl posts from websites/blogs I often read
+- [X] aaronsw.com
+- [X] aeon.co
+- [X] ars_technica
+- [X] bookhunter
+- [X] brainpickings
+- [X] edge.org
+- [X] elleman
+- [X] guuvn
+- [X] howtogeek
+- [X] ipick
+- [X] kenh14
+- [X] luatkhoa
+- [X] medium
+- [X] psmag
+- [X] spiderum
+- [X] tamlyhoctoipham
+- [X] thehackernews
+- [X] vnexpress
+- [X] vox
+- [X] wired
+- [X] zing

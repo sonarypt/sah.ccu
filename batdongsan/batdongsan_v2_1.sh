@@ -22,23 +22,23 @@ source /home/user/scripts/shell_function.sh
 # define custom curl string with header for safety purpose
 
 ddos_check () {
-  # function detect anti-DDOS message
+   # function detect anti-DDOS message
 
-  # check .tmp file before move to .html
-  # crawl with notice about DDOS feature
-  # if detect anti-ddos message, then exit
-  # unblock DDOS with auto send request
-  if grep -Foq "DDOS" $2; then
-    print_style "## CHECKING ANTI-DDOS REQUEST" "danger"
-    unblock_ddos_link=$(grep -oP "http://[a-z./?=]+" $2)
-    curl_l $unblock_ddos_link > /dev/null
-    print_style "## UNBLOCKED ANTI-DDOS REQUEST" "success"
-    rm ${2%.*}.tmp
-    curl_l $1 > ${2%.*}.html
-  else
-    mv ${2%.*}.tmp ${2%.*}.html
-  fi
-  sleep "$(( ( $RANDOM % 3 ) + 2 ))s"
+   # check .tmp file before move to .html
+   # crawl with notice about DDOS feature
+   # if detect anti-ddos message, then exit
+   # unblock DDOS with auto send request
+   if grep -Foq "DDOS" $2; then
+      print_style "## CHECKING ANTI-DDOS REQUEST" "danger"
+      unblock_ddos_link=$(grep -oP "http://[a-z./?=]+" $2)
+      curl_l $unblock_ddos_link > /dev/null
+      print_style "## UNBLOCKED ANTI-DDOS REQUEST" "success"
+      rm ${2%.*}.tmp
+      curl_l $1 > ${2%.*}.html
+   else
+      mv ${2%.*}.tmp ${2%.*}.html
+   fi
+   sleep "$(( ( $RANDOM % 3 ) + 2 ))s"
 }
 
 # limit number of loop to crawl
@@ -58,11 +58,11 @@ chothue_list=$bds_dir/chothue.list
 
 # for faster coding only. get back to automate crawl list later
 if [ ! -f $canban_list ]; then
-  echo -e "http://www.batdongsan.vn/giao-dich/ban-can-ho-chung-cu.html|can_ho_chung_cu|căn hộ chung cư" >> $canban_list
-  echo -e "http://www.batdongsan.vn/giao-dich/ban-nha-rieng.html|nha_rieng|nhà riêng" >> $canban_list
-  echo -e "http://www.batdongsan.vn/giao-dich/ban-nha-mat-pho.html|nha_mat_pho|nhà mặt phố" >> $canban_list
-  echo -e "http://www.batdongsan.vn/giao-dich/ban-biet-thu-lien-ke.html|biet_thu_lien_ke|biệt thự liền kề" >> $canban_list
-  echo -e "http://www.batdongsan.vn/giao-dich/ban-dat-nen.html|dat_nen|đất nền" >> $canban_list
+   echo -e "http://www.batdongsan.vn/giao-dich/ban-can-ho-chung-cu.html|can_ho_chung_cu|căn hộ chung cư" >> $canban_list
+   echo -e "http://www.batdongsan.vn/giao-dich/ban-nha-rieng.html|nha_rieng|nhà riêng" >> $canban_list
+   echo -e "http://www.batdongsan.vn/giao-dich/ban-nha-mat-pho.html|nha_mat_pho|nhà mặt phố" >> $canban_list
+   echo -e "http://www.batdongsan.vn/giao-dich/ban-biet-thu-lien-ke.html|biet_thu_lien_ke|biệt thự liền kề" >> $canban_list
+   echo -e "http://www.batdongsan.vn/giao-dich/ban-dat-nen.html|dat_nen|đất nền" >> $canban_list
 fi
 
 # read all leading link from list

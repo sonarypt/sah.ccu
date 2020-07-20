@@ -92,7 +92,7 @@ def convertFootnotes(html_content, file_name)
          html_content.gsub!(footnote_tag.to_s, new_tag)
       end
    end
-   # TODO remove all nodes after  node <hr> if exists
+   # TODO: remove all nodes after  node <hr> if exists
 
 end
 

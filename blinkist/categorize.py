@@ -28,7 +28,7 @@ def check_move(f1, f2):
 
 blinkist_homepage = "https://www.blinkist.com"
 categories_list_file = "./data/categories_list.txt"
-categories_dir = "./categories"
+categories_dir = "./categorized"
 list_dir = "./list"
 
 # MAKE DIR IF CATEFORIES DIR DOES NOT EXIST

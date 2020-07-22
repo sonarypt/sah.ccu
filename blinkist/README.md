@@ -12,5 +12,6 @@ There are many books appeared in the multiple categories, some are uncategorized
 
 - Updating the most recent books: ./skimmers.py
 - Get books by categories: ./categorize.py
+- Packing md and docx files from local folder: ./packing.py
 
-All the result I got is at first run, so need to maintain code furthur for better updating later.
+All the result I got is at first run, so need to maintain code furthur for better updating later. How to better maintain folders structure that easier later for uploading to Google Drive.
